@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<project name="techconf-ant-macros" default="test-macros" basedir=".">
+    <!-- prints a banner for the target being executed -->
+    <macrodef name="target_banner">
+        <attribute name="target"></attribute>
+        <attribute name="message" default=""></attribute>
+        <sequential>
+            <echo>Executing Target @{target}</echo>
+            <echo>@{message}</echo>
+        </sequential>
+    </macrodef>
+    <!-- test the macros -->
+    <target_banner target="Compile"></target_banner>
+    <target_banner target="Testing" message="This is a sample message"></target_banner>
+</project>
